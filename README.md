@@ -7,9 +7,9 @@ This is an official PyTorch Implementation of **"CLIP-Driven Multi-Scale Instanc
 
 **Please download the extracted I3D features for XD-Violence and UCF-Crime dataset from links below:**
 
-> [**XD-Violence I3D onedirve**](https://cqueducn0-my.sharepoint.com/:f:/g/personal/zbqian_cqu_edu_cn/EqnWl_Nm3h1Crjnq24wusEgB04Kvabbs_8eqMKgDHXieBA?e=x89K5f)
+> [**XD-Violence I3D onedrive**](https://cqueducn0-my.sharepoint.com/:f:/g/personal/zbqian_cqu_edu_cn/EqnWl_Nm3h1Crjnq24wusEgB04Kvabbs_8eqMKgDHXieBA?e=x89K5f)
 
-> [**UCF-Crime I3D onedirve**](https://cqueducn0-my.sharepoint.com/:f:/g/personal/zbqian_cqu_edu_cn/EqnWl_Nm3h1Crjnq24wusEgB04Kvabbs_8eqMKgDHXieBA?e=x89K5f)
+> [**UCF-Crime I3D onedrive**](https://cqueducn0-my.sharepoint.com/:f:/g/personal/zbqian_cqu_edu_cn/EqnWl_Nm3h1Crjnq24wusEgB04Kvabbs_8eqMKgDHXieBA?e=x89K5f)
 
 **After downloading, please put it in the `data/` folder (No need to unzip)**
 
