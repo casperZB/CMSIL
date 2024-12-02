@@ -89,24 +89,24 @@ class TripletLoss(nn.Module):
 
 
 class TotalLoss(nn.Module):
-    def __init__(self, args, num_tasks=2):
+    def __init__(self, args, num_tasks=3):
         super(TotalLoss, self).__init__()
         params = torch.ones(num_tasks, requires_grad=True)
         self.params = torch.nn.Parameter(params)
 
         self.pse = PseLoss(args)
         self.cls = ClsLoss(args)
-        # self.triplet = TripletLoss()
+        self.triplet = TripletLoss()
 
     def forward(self, scores, logits, masks, contrast_pairs, pseudo_label):
         loss_pse = self.pse(logits, masks, pseudo_label)
         loss_cls = self.cls(scores, masks)
-        # loss_trip = self.triplet(contrast_pairs)
+        loss_trip = self.triplet(contrast_pairs)
         loss_total = self.cal_loss(loss_pse, loss_cls)
         loss_dict = {
             "Loss/PSE": loss_pse.item(),
             "Loss/Cls": loss_cls.item(),
-            # "Loss/Tri": loss_trip.item(),
+            "Loss/Tri": loss_trip.item(),
             "Loss/Total": loss_total.item(),
         }
         return loss_total, loss_dict
